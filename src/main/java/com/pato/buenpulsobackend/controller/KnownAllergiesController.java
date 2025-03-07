@@ -31,6 +31,7 @@ public class KnownAllergiesController {
     @PostMapping("/new")
     public ResponseEntity<Void> postKnownAllergy(@RequestBody KnownAllergies knownAllergies) {
         knownAllergiesService.postKnownAllergies(knownAllergies);
+        System.out.println("Llega");
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
