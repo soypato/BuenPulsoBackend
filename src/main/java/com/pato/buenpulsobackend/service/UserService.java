@@ -2,6 +2,7 @@ package com.pato.buenpulsobackend.service;
 
 import com.pato.buenpulsobackend.model.User;
 import com.pato.buenpulsobackend.repository.IUserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,11 +23,11 @@ public class UserService implements IUserService {
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
-
     @Override
     public void postUser(User user) {
         userRepository.save(user);
     }
+
 
     @Override
     public void putUser(User user) {

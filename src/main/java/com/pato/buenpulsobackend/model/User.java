@@ -32,7 +32,7 @@ public class User {
     private double weightKg; // decimal
 
     @ManyToOne
-    @JoinColumn(name="blood_type_id", nullable = false)
+    @JoinColumn(name="blood_type_id", nullable = true)
     @JsonBackReference
     private BloodType bloodType;
 
