@@ -33,7 +33,6 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name="blood_type_id", nullable = true)
-    @JsonBackReference
     private BloodType bloodType;
 
     @Column(nullable = false)

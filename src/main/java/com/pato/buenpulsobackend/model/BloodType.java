@@ -1,5 +1,7 @@
 package com.pato.buenpulsobackend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Generated;
 import lombok.Getter;
@@ -17,5 +19,6 @@ public class BloodType {
 
     // bloodType is a attribute in User => one BloodType have many users
     @OneToMany(mappedBy = "bloodType", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<User> users;
 }
