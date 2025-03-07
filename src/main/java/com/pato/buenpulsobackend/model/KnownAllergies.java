@@ -13,6 +13,7 @@ public class KnownAllergies {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long idKnownAllergies;
+    private String allergy;
     private LocalDate date;
 
     @ManyToOne
