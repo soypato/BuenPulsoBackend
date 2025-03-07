@@ -1,5 +1,6 @@
 package com.pato.buenpulsobackend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Generated;
 import lombok.Getter;
@@ -18,5 +19,6 @@ public class KnownAllergies {
 
     @ManyToOne
     @JoinColumn(name="user_id")
+    @JsonIgnore
     private User user;
 }
